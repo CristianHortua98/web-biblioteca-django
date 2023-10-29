@@ -1,0 +1,22 @@
+<h1>Categorias</h1>
+
+
+<table>
+    <thead>
+        <th>#</th>
+        <th>Categoria</th>
+        <th>Cantidad</th>
+        <th>Detalle</th>
+    </thead>
+    <tbody>
+        {% for categoria in lista_categorias %}
+            <tr>
+                <td>{{ categoria.id }}</td>
+                <td>{{ categoria.nombre }}</td>
+                <td>{{ categoria.num_libros }}</td>
+                <td><a href="{% url 'libro-categoria' categoria.id %}">Libros</a></td>
+            </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
